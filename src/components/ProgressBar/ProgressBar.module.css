@@ -1,0 +1,39 @@
+/* ProgressBar.module.css */
+
+.markerPin {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: blue; /* Choose your color */
+  position: absolute;
+  cursor: pointer;
+}
+
+.markerPin::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 1px solid blue; /* Same color as the pin */
+  height: 20px; /* Adjust as needed */
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.markerPin:hover .tooltip {
+  visibility: visible;
+}
